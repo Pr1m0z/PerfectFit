@@ -29,6 +29,19 @@ body {
     cursor: pointer;
 }
 
+/* Add this CSS to hide the logo when the screen width is below 600px */
+@media screen and (max-width: 600px) {
+    .logo {
+        display: none;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 25px 200px;
+        display: flex;
+        justify-content: center;
+    }
+}
 
 .navbar ul {
     display: flex;
@@ -616,82 +629,4 @@ a {
     padding: 5px;
     background-color: red;
     color: white;
-}
-
-/* Base static layout settings */
-html {
-    min-width: 1200px;
-    overflow-x: auto;
-}
-
-body {
-    min-width: 1200px;
-    margin: 0;
-    padding: 0;
-    overflow-x: auto;
-    transform: none !important;
-    background-color: #f0f0f0;
-}
-
-/* Remove all media queries and replace with static widths */
-.navbar {
-    width: 100%;
-    min-width: 1200px;
-    padding: 25px 200px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #000;
-}
-
-.logo {
-    width: 150px;
-    display: block !important; /* Force logo to always show */
-}
-
-.container {
-    width: 1050px !important; /* Fixed width */
-    margin: 3% auto;
-    padding: 20px 0;
-    transform: none !important;
-}
-
-.row {
-    display: flex;
-    width: 1000px;
-    flex-wrap: nowrap; /* Prevent wrapping */
-}
-
-.col-left {
-    width: 250px; /* Fixed width */
-    flex: none;
-    padding: 10px;
-}
-
-.col-right {
-    width: 750px; /* Fixed width */
-    flex: none;
-    padding: 10px;
-}
-
-.popup-content {
-    width: 300px !important; /* Fixed width */
-    margin: 15% auto;
-}
-
-/* Remove responsive classes */
-.form-control {
-    width: 100%;
-    max-width: none;
-}
-
-/* Add horizontal scrollbar for small screens */
-@media screen and (max-width: 1200px) {
-    html, body, .container, .navbar {
-        min-width: 1050px;
-        transform: none !important;
-    }
-    
-    body {
-        overflow-x: auto;
-    }
 }

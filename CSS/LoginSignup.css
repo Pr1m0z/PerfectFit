@@ -15,8 +15,6 @@ body {
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    min-width: 768px; /* Prevent shrinking below this width */
-    overflow-x: auto; /* Add horizontal scroll if needed */
 }
 
 .container {
@@ -26,9 +24,9 @@ body {
     position: relative;
     overflow: hidden;
     margin: 10% auto;
-    width: 768px; /* Fixed width */
+    width: 768px;
+    max-width: 100%;
     min-height: 480px;
-    /* Remove max-width to prevent resizing */
 }
 
 .container p {
@@ -353,15 +351,3 @@ body {
     width: 50%;
 }
 
-
-@media screen and (max-width: 768px) {
-    body {
-        transform: scale(1); /* Prevent auto scaling */
-        transform-origin: center;
-    }
-    
-    .container {
-        transform: scale(1); /* Prevent auto scaling */
-        margin: 10% auto;
-    }
-}

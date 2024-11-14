@@ -195,8 +195,11 @@ a {
 .product-display {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    /* 6 columns */
     gap: 20px;
+    /* Space between cards */
     justify-content: center;
+    /* Center the grid */
     margin-bottom: 50px;
     margin-top: 20px;
 }
@@ -223,6 +226,34 @@ a {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@media (max-width: 1200px) {
+    .product-display {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns for medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .product-display {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns for small screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .product-display {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for extra small screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .product-display {
+        grid-template-columns: 1fr;
+        /* 1 column for very small screens */
+    }
 }
 
 .product-display .card .image {
@@ -514,7 +545,6 @@ a {
 .sort-container {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 .sort-container p {
@@ -539,41 +569,507 @@ a {
 select option[value=""][disabled][selected] {
     display: none;
 }
+/* Existing CSS code remains unchanged */
 
-@media screen and (max-width: 1500px) {
-    html, body, .container, .content {
-        min-width: 1500px;
-        width: 1500px;
-        transform: none !important;
-    }
-    
+/* Responsive adjustments */
+@media (max-width: 1500px) {
     .product-display {
-        width: 1200px;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns for medium screens */
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+    .left-column {
+        padding: 0px;
+    }
+    .right-column {
+        padding: 0px;
+    }
+    .filter-formbox {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+    .search-barA {
+        width: 100%;
+        padding: 10px;
+    }
+    #search-input {
+        width: 900px;
+    }
+    .sort-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sort-container button, .sort-container select {
+        width: 100%;
+        margin: 5px 0;
+        text-align: left;
+    }
+    .analysis {
+        background-color: #FFD700;
+        color: black;
+        width: 500px;
+    }
+    .banner {
+        width: 100vw;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        position: relative;
     }
     
-    #search-input {
-        width: 1400px !important;
+    /* Add to root/body to prevent any horizontal scrolling */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100vw;
     }
 }
-.search-barA {
-    width: 1000px !important;
+
+@media (max-width: 1400px) {
+    .product-display {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns for medium screens */
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .navbar ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+    .left-column {
+        padding: 0px;
+    }
+    .right-column {
+        padding: 0px;
+    }
+    .filter-formbox {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+    .search-barA {
+        width: 100%;
+        padding: 10px;
+    }
+    #search-input {
+        width: 900px;
+    }
+    .sort-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sort-container button, .sort-container select {
+        width: 100%;
+        margin: 5px 0;
+        text-align: left;
+    }
+
+    .banner {
+        width: 100vw;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    /* Add to root/body to prevent any horizontal scrolling */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
 }
 
-#search-input {
-    width: 1000px !important;
+@media (max-width: 1300px) {
+    .product-display {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns for medium screens */
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .navbar ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+    .left-column {
+        padding: 0px;
+    }
+    .right-column {
+        padding: 0px;
+    }
+    .filter-formbox {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+    .search-barA {
+        width: 100%;
+        padding: 10px;
+    }
+    #search-input {
+        width: 900px;
+    }
+    .sort-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sort-container button, .sort-container select {
+        width: 100%;
+        margin: 5px 0;
+        text-align: left;
+    }
+
+    .banner {
+        width: 100vw;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    /* Add to root/body to prevent any horizontal scrolling */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
 }
 
-html {
-    min-width: 1500px; /* Minimum width of the page */
-    overflow-x: auto;
+@media (max-width: 1200px) {
+    .product-display {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns for medium screens */
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .navbar ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+    .left-column {
+        padding: 0px;
+    }
+    .right-column {
+        padding: 0px;
+    }
+    .filter-formbox {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+    .search-barA {
+        width: 100%;
+        padding: 10px;
+    }
+    #search-input {
+        width: 900px;
+    }
+    .sort-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sort-container button, .sort-container select {
+        width: 100%;
+        margin: 5px 0;
+        text-align: left;
+    }
+
+    .banner {
+        width: 100vw;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    /* Add to root/body to prevent any horizontal scrolling */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
 }
 
-body {
-    min-width: 1500px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: auto;
-    transform: none !important; /* Prevent any automatic transformations */
+@media (max-width: 900px) {
+    .product-display {
+        grid-template-columns: repeat(2, 1fr);
+        /* 3 columns for small screens */
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .navbar ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+    .left-column {
+        padding: 0px;
+    }
+    .right-column {
+        padding: 0px;
+    }
+    .filter-formbox {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+    .search-barA {
+        width: 100%;
+        padding: 10px;
+    }
+    #search-input {
+        width: 500px;
+    }
+    .sort-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sort-container button, .sort-container select {
+        width: 100%;
+        margin: 5px 0;
+        text-align: left;
+    }
+
+    .banner {
+        width: 100vw;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    /* Add to root/body to prevent any horizontal scrolling */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-display {
+        grid-template-columns: repeat(1, 1fr);
+        /* 2 columns for extra small screens */
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .navbar ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+    .left-column {
+        padding: 0px;
+    }
+    .right-column {
+        padding: 0px;
+    }
+    .filter-formbox {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+    .search-barA {
+        width: 100%;
+        padding: 10px;
+    }
+    #search-input {
+        width: 100%;
+    }
+    .sort-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sort-container button, .sort-container select {
+        width: 100%;
+        margin: 5px 0;
+        text-align: left;
+    }
+
+    .banner {
+        width: 100vw;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    /* Add to root/body to prevent any horizontal scrolling */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .product-display {
+        grid-template-columns: 1fr;
+        /* 1 column for very small screens */
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .navbar ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+    .left-column {
+        padding: 0px;
+    }
+    .right-column {
+        padding: 0px;
+    }
+    .filter-formbox {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+    .search-barA {
+        width: 100%;
+        padding: 10px;
+    }
+    #search-input {
+        width: 100%;
+    }
+    .sort-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sort-container button, .sort-container select {
+        width: 100%;
+        margin: 5px 0;
+        text-align: left;
+    }
+
+    .banner {
+        width: 100vw;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    /* Add to root/body to prevent any horizontal scrolling */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100vw;
+    }
 }
