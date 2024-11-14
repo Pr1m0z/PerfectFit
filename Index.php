@@ -14,7 +14,7 @@
         <div class="navbar">
         <a href="../HTML/Index.php"><img src="../IMAGES/RICH SABINIANS.png" class="logo">
             <ul>
-                <li><a href="HTML/Index.php">Home</a></li>
+                <li><a href="Index.php">Home</a></li>
                 <li><a href="HTML/Home User.php">Shop</a></li>
                 <li><a href="HTML/Login.php">Login</a></li>
             </ul>
